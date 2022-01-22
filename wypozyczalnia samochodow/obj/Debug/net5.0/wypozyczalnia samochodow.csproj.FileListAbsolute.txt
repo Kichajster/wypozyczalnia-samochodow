@@ -1,0 +1,17 @@
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\bin\Debug\net5.0\wypozyczalnia samochodow.exe
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\bin\Debug\net5.0\wypozyczalnia samochodow.deps.json
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\bin\Debug\net5.0\wypozyczalnia samochodow.runtimeconfig.json
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\bin\Debug\net5.0\wypozyczalnia samochodow.runtimeconfig.dev.json
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\bin\Debug\net5.0\wypozyczalnia samochodow.dll
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\bin\Debug\net5.0\ref\wypozyczalnia samochodow.dll
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\bin\Debug\net5.0\wypozyczalnia samochodow.pdb
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\obj\Debug\net5.0\wypozyczalnia samochodow.csproj.AssemblyReference.cache
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\obj\Debug\net5.0\wypozyczalnia samochodow.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\obj\Debug\net5.0\wypozyczalnia samochodow.AssemblyInfoInputs.cache
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\obj\Debug\net5.0\wypozyczalnia samochodow.AssemblyInfo.cs
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\obj\Debug\net5.0\wypozyczalnia samochodow.csproj.CoreCompileInputs.cache
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\obj\Debug\net5.0\wypozyczalnia samochodow.dll
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\obj\Debug\net5.0\ref\wypozyczalnia samochodow.dll
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\obj\Debug\net5.0\wypozyczalnia samochodow.pdb
+C:\Users\Aleksandra\Desktop\wypozyczalniaSamochodow\wypozyczalnia-samochodow\wypozyczalnia samochodow\obj\Debug\net5.0\wypozyczalnia samochodow.genruntimeconfig.cache

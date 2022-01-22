@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Studia\\Podstawy programowania\\Zadania\\Wypożyczalnia Samochodów\\wypozyczalnia samochodow\\wypozyczalnia samochodow\\wypozyczalnia samochodow.csproj": {}
+    "C:\\Users\\Aleksandra\\Desktop\\wypozyczalniaSamochodow\\wypozyczalnia-samochodow\\wypozyczalnia samochodow\\wypozyczalnia samochodow.csproj": {}
   },
   "projects": {
-    "D:\\Studia\\Podstawy programowania\\Zadania\\Wypożyczalnia Samochodów\\wypozyczalnia samochodow\\wypozyczalnia samochodow\\wypozyczalnia samochodow.csproj": {
+    "C:\\Users\\Aleksandra\\Desktop\\wypozyczalniaSamochodow\\wypozyczalnia-samochodow\\wypozyczalnia samochodow\\wypozyczalnia samochodow.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Studia\\Podstawy programowania\\Zadania\\Wypożyczalnia Samochodów\\wypozyczalnia samochodow\\wypozyczalnia samochodow\\wypozyczalnia samochodow.csproj",
+        "projectUniqueName": "C:\\Users\\Aleksandra\\Desktop\\wypozyczalniaSamochodow\\wypozyczalnia-samochodow\\wypozyczalnia samochodow\\wypozyczalnia samochodow.csproj",
         "projectName": "wypozyczalnia samochodow",
-        "projectPath": "D:\\Studia\\Podstawy programowania\\Zadania\\Wypożyczalnia Samochodów\\wypozyczalnia samochodow\\wypozyczalnia samochodow\\wypozyczalnia samochodow.csproj",
-        "packagesPath": "C:\\Users\\crimy\\.nuget\\packages\\",
-        "outputPath": "D:\\Studia\\Podstawy programowania\\Zadania\\Wypożyczalnia Samochodów\\wypozyczalnia samochodow\\wypozyczalnia samochodow\\obj\\",
+        "projectPath": "C:\\Users\\Aleksandra\\Desktop\\wypozyczalniaSamochodow\\wypozyczalnia-samochodow\\wypozyczalnia samochodow\\wypozyczalnia samochodow.csproj",
+        "packagesPath": "C:\\Users\\Aleksandra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Aleksandra\\Desktop\\wypozyczalniaSamochodow\\wypozyczalnia-samochodow\\wypozyczalnia samochodow\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\crimy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Aleksandra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -43,6 +43,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
