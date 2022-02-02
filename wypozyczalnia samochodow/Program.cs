@@ -12,28 +12,22 @@ namespace wypozyczalnia_samochodow
     class Program
     {
         static void Main(string[] args)
-
-            //sprawdzam czy wyswietla dobrze listy
-        {
-            string path = Directory.GetCurrentDirectory() + "\\Samochody.json";
-            string content = File.ReadAllText(path);
-            List<Samochod> WszystkieSamochody = JsonConvert.DeserializeObject<List<Samochod>>(content);
-
-            for (int i = 0; i < WszystkieSamochody.Count; i++)
-            {
-                Console.WriteLine(WszystkieSamochody[i].Marka);
-            }
-             
-            path = Directory.GetCurrentDirectory() + "\\Klienci.json";
-            content = File.ReadAllText(path);
-            List<Klient> WszyscyKlienci = JsonConvert.DeserializeObject<List<Klient>>(content);
-
-            for (int i = 0; i < WszyscyKlienci.Count; i++)
-            {
-                Console.WriteLine(WszyscyKlienci[i].Imie);
-            }
+       {
             
-        }
+            Console.WriteLine("WYBIERZ OPCJĘ:");
+            Console.WriteLine();
+            Console.WriteLine("1 => LISTA KLIENTÓW I SAMOCHODÓW");
+            Console.WriteLine();
+            Console.WriteLine("2 => WYPOŻYCZENIE SAMOCHODU");
+            Console.WriteLine();
+            Console.WriteLine("3 => ZAKOŃCZ PROGRAM");
+            Console.WriteLine();
+            Console.WriteLine("WYBIERZ 1, 2 LUB 3:");
+
+            public int option { get; set; }
+
+
+    }
     }
 }
 
