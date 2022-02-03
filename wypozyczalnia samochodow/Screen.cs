@@ -27,6 +27,8 @@ namespace wypozyczalnia_samochodow
             string content = File.ReadAllText(path);
             List<Clients> AllClients = JsonConvert.DeserializeObject<List<Clients>>(content);
 
+            Console.WriteLine("Id | Imię i Nazwisko | Data wydania prawa jazdy");
+
             for (int i = 0; i < AllClients.Count; i++)
             {
                 Console.WriteLine(AllClients[i].Id + " | " + AllClients[i].FullName + " | " + AllClients[i].LicenceDate.ToShortDateString());
@@ -37,6 +39,8 @@ namespace wypozyczalnia_samochodow
             string path = Directory.GetCurrentDirectory() + "\\cars.json";
             string content = File.ReadAllText(path);
             List<Cars> AllCars = JsonConvert.DeserializeObject<List<Cars>>(content);
+
+            Console.WriteLine("Id | Model | Segment | Rodzaj paliwa | Cena za dobę");
 
             for (int i = 0; i < AllCars.Count; i++)
             {
