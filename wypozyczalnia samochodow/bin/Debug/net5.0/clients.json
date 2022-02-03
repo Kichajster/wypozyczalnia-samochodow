@@ -1,0 +1,27 @@
+[
+    {
+      "Id": 1,
+      "FullName": "Jan Nowak",
+      "LicenceDate": "2021-03-04"
+    },
+    {
+      "Id": 2,
+      "FullName": "Agnieszka Kowalska",
+      "LicenceDate": "1999-01-15"
+    },
+    {
+      "Id": 3,
+      "FullName": "Robert Lewandowski",
+      "LicenceDate": "2010-12-18"
+    },
+    {
+      "Id": 4,
+      "FullName": "Zofia Plucinska",
+      "LicenceDate": "2020-04-29"
+    },
+    {
+      "Id": 5,
+      "FullName": "Grzegorz Braun",
+      "LicenceDate": "2015-07-12"
+    }
+  ]
