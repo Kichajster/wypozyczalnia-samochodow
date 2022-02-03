@@ -32,7 +32,17 @@ namespace wypozyczalnia_samochodow
                 Console.WriteLine(AllClients[i].Id + " | " + AllClients[i].FullName + " | " + AllClients[i].LicenceDate.ToShortDateString());
             }
         }
+        public static void ShowCars()
+        {
+            string path = Directory.GetCurrentDirectory() + "\\cars.json";
+            string content = File.ReadAllText(path);
+            List<Cars> AllCars = JsonConvert.DeserializeObject<List<Cars>>(content);
 
+            for (int i = 0; i < AllCars.Count; i++)
+            {
+                Console.WriteLine(AllCars[i].Id + " | " + AllCars[i].Brand + " | " + AllCars[i].Segment + " | " + AllCars[i].FuelType + " | " + AllCars[i].Price);
+            }
+        }
 
 
 

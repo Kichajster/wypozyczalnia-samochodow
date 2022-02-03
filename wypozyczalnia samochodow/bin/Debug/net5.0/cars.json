@@ -1,84 +1,82 @@
-﻿{
-  "Cars": [
+[
     {
       "Id": 1,
-      "Brand": "Škoda Citigo",
+      "Brand": "Skoda Citigo",
       "Segment": "mini",
-      "Fuel": "benzyna",
-      "PriceDay": "70 PLN",
-      "status": true
+      "FuelType": "benzyna",
+      "Price": "70 PLN",
+      "IsAvailable": true
     },
     {
       "Id": 2,
       "Brand": "Toyota Aygo",
       "Segment": "mini",
-      "Fuel": "benzyna",
-      "PriceDay": "90 PLN",
-      "status": true
+      "FuelType": "benzyna",
+      "Price": "90 PLN",
+      "IsAvailable": true
     },
     {
       "Id": 3,
       "Brand": "Fiat 500",
       "Segment": "mini",
-      "Fuel": "elektryczny",
-      "PriceDay": "110 PLN",
-      "status": true
+      "FuelType": "elektryczny",
+      "Price": "110 PLN",
+      "IsAvailable": true
     },
     {
       "Id": 4,
       "Brand": "Ford Focus",
       "Segment": "kompakt",
-      "Fuel": "diesel",
-      "PriceDay": "160 PLN",
-      "status": true
+      "FuelType": "diesel",
+      "Price": "160 PLN",
+      "IsAvailable": true
     },
     {
       "Id": 5,
       "Brand": "Kia Ceed",
       "Segment": "kompakt",
-      "Fuel": "benzyna",
-      "PriceDay": "150 PLN",
-      "status": true
+      "FuelType": "benzyna",
+      "Price": "150 PLN",
+      "IsAvailable": true
     },
     {
       "Id": 6,
       "Brand": "Volkswagen Golf",
       "Segment": "kompakt",
-      "Fuel": "benzyna",
-      "PriceDay": "160 PLN",
-      "status": true
+      "FuelType": "benzyna",
+      "Price": "160 PLN",
+      "IsAvailable": true
     },
     {
       "Id": 7,
       "Brand": "Hyundai Kona Electric",
       "Segment": "kompakt",
-      "Fuel": "elektryczny",
-      "PriceDay": "180 PLN",
-      "status": true
+      "FuelType": "elektryczny",
+      "Price": "180 PLN",
+      "IsAvailable": true
     },
     {
       "Id": 8,
       "Brand": "Audi R6 Allroad",
       "Segment": "premium",
-      "Fuel": "diesel",
-      "PriceDay": "290 PLN",
-      "status": true
+      "FuelType": "diesel",
+      "Price": "290 PLN",
+      "IsAvailable": true
     },
     {
       "Id": 9,
       "Brand": "Mercedes E270 AMG",
       "Segment": "premium",
-      "Fuel": "benzyna",
-      "priceDay": "320 PLN",
-      "status": true
+      "FuelType": "benzyna",
+      "price": "320 PLN",
+      "IsAvailable": true
     },
     {
       "Id": 10,
       "Brand": "Tesla Model S",
       "Segment": "premium",
-      "Fuel": "elektryczny",
-      "PriceDay": "350 PLN",
-      "status": true
+      "FuelType": "elektryczny",
+      "Price": "350 PLN",
+      "IsAvailable": true
     }
   ]
-}

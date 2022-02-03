@@ -14,6 +14,8 @@ namespace wypozyczalnia_samochodow
         {
             Screen.ShowMenu();
             Screen.ShowClients();
+            Console.WriteLine();
+            Screen.ShowCars();
            // while (true)
             {
                 
