@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace wypozyczalnia_samochodow
 {
-    public class Screen
+    public static class Screen
     {
-
+        
         public static void ShowMenu()
         {
             Console.WriteLine("WYBIERZ OPCJĘ:");
@@ -18,15 +18,31 @@ namespace wypozyczalnia_samochodow
             Console.WriteLine("2 => WYPOŻYCZENIE SAMOCHODU");
             Console.WriteLine("3 => ZAKOŃCZ PROGRAM");
             Console.WriteLine("WYBIERZ 1, 2 LUB 3:");
-            Console.ReadLine();
-        }
+        }//pokaż menu
 
-        public static void ShowClients()
+        public static int MenuOption()
         {
-            string path = Directory.GetCurrentDirectory() + "\\clients.json";
-            string content = File.ReadAllText(path);
-            List<Clients> AllClients = JsonConvert.DeserializeObject<List<Clients>>(content);
+            ShowMenu();
+            string option = Console.ReadLine();
+            List<string> Response = new List<string> { "1", "2", "3" };
+            
+            while (!Response.Contains(option))
+            {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Wybrałeś niepoprawną opcję!");
+                Console.ForegroundColor = ConsoleColor.White;
+                ShowMenu();
+                option = Console.ReadLine();
 
+            }
+            return int.Parse(option);
+
+
+        } //menu opcji
+
+        public static void ShowClients(List<Clients> AllClients)
+        {
             Console.WriteLine("LISTA KLIENTÓW:");
             Console.WriteLine("---------------------------");
             Console.WriteLine("Id | Imię i Nazwisko | Data wydania prawa jazdy");
@@ -35,13 +51,9 @@ namespace wypozyczalnia_samochodow
             {
                 Console.WriteLine(AllClients[i].Id + " | " + AllClients[i].FullName + " | " + AllClients[i].LicenceDate.ToShortDateString());
             }
-        }
-        public static void ShowCars()
+        }//lista klientów
+        public static void ShowCars(List<Cars> AllCars)
         {
-            string path = Directory.GetCurrentDirectory() + "\\cars.json";
-            string content = File.ReadAllText(path);
-            List<Cars> AllCars = JsonConvert.DeserializeObject<List<Cars>>(content);
-
             Console.WriteLine();
             Console.WriteLine("LISTA SAMOCHODÓW:");
             Console.WriteLine("---------------------------");
@@ -51,9 +63,55 @@ namespace wypozyczalnia_samochodow
             {
                 Console.WriteLine(AllCars[i].Id + " | " + AllCars[i].Brand + " | " + AllCars[i].Segment + " | " + AllCars[i].FuelType + " | " + AllCars[i].Price);
             }
+        }//lista samochodów
+
+        public static void ShowAll(List<Clients> AllClients, List<Cars> AllCars)
+        {
+            Console.Clear();
+            ShowClients(AllClients);
+            ShowCars(AllCars);
+        }//pokaż liste klientów i samochodów
+
+        public static string ClientID(bool FirstTimeAsking)
+        {
+            Console.Clear();
+            if (!FirstTimeAsking)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("NIE ZNALEZIONO KLIENTA O PODANYM ID");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+                Console.WriteLine("PROSZĘ PODAĆ ID KLIENTA, KTÓRY WYPOŻYCZA SAMOCHÓD:");
+                string option = Console.ReadLine();
+                return option;
         }
-
-
+        public static string GetItemFromList(List<string> Items)
+        {
+            bool FirstTimeAsking = true;
+            while (true)
+            {
+                Console.Clear();
+                if (!FirstTimeAsking)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("NIEPOPRAWNY WYBÓR");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+                FirstTimeAsking = false;
+                Console.WriteLine("WYBIERZ SEGMENT:");
+                for(int i = 0; i < Items.Count; i++)
+                {
+                    Console.WriteLine((i + 1) + ". " + Items[i]);
+                }
+                string response = Console.ReadLine();
+                int Parsed;
+                if (int.TryParse(response, out Parsed))
+                {
+                    if (Parsed >= 1 && Parsed <= Items.Count)
+                        return Items[Parsed - 1];
+                }
+            }
+        }
 
     }
 }

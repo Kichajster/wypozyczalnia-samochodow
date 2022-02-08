@@ -12,14 +12,29 @@ namespace wypozyczalnia_samochodow
 
         static void Main(string[] args)
         {
-            Screen.ShowMenu();
-            Screen.ShowClients();
-            Screen.ShowCars();
-           // while (true)
+           CarRental carRental = new CarRental();
+           while (true)
             {
-                
-                
-                    
+                int option = Screen.MenuOption();
+                if (option == 1)
+                {
+                    Screen.ShowAll(carRental.AllClients, carRental.AllCars);
+                }
+                else if (option == 2)
+                {
+                    Clients client = null;
+                    bool firstTimeAsking = true;
+                    while (client == null)
+                    {
+                        client = carRental.GetClientByID(Screen.ClientID(firstTimeAsking));
+                        firstTimeAsking = false;
+                    }
+                    string Segment = Screen.GetItemFromList(carRental.GetSegmentListByClient(client));
+                }
+                else
+                {
+                    return;
+                }
                 
             }
 
