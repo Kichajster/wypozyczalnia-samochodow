@@ -4,7 +4,7 @@
       "Brand": "Skoda Citigo",
       "Segment": "mini",
       "FuelType": "benzyna",
-      "Price": "70 PLN",
+      "Price": "70",
       "IsAvailable": true
     },
     {
@@ -12,7 +12,7 @@
       "Brand": "Toyota Aygo",
       "Segment": "mini",
       "FuelType": "benzyna",
-      "Price": "90 PLN",
+      "Price": "90",
       "IsAvailable": true
     },
     {
@@ -20,7 +20,7 @@
       "Brand": "Fiat 500",
       "Segment": "mini",
       "FuelType": "elektryczny",
-      "Price": "110 PLN",
+      "Price": "110",
       "IsAvailable": true
     },
     {
@@ -28,7 +28,7 @@
       "Brand": "Ford Focus",
       "Segment": "kompakt",
       "FuelType": "diesel",
-      "Price": "160 PLN",
+      "Price": "160",
       "IsAvailable": true
     },
     {
@@ -36,7 +36,7 @@
       "Brand": "Kia Ceed",
       "Segment": "kompakt",
       "FuelType": "benzyna",
-      "Price": "150 PLN",
+      "Price": "150",
       "IsAvailable": true
     },
     {
@@ -44,7 +44,7 @@
       "Brand": "Volkswagen Golf",
       "Segment": "kompakt",
       "FuelType": "benzyna",
-      "Price": "160 PLN",
+      "Price": "160",
       "IsAvailable": true
     },
     {
@@ -52,7 +52,7 @@
       "Brand": "Hyundai Kona Electric",
       "Segment": "kompakt",
       "FuelType": "elektryczny",
-      "Price": "180 PLN",
+      "Price": "180",
       "IsAvailable": true
     },
     {
@@ -60,7 +60,7 @@
       "Brand": "Audi R6 Allroad",
       "Segment": "premium",
       "FuelType": "diesel",
-      "Price": "290 PLN",
+      "Price": "290",
       "IsAvailable": true
     },
     {
@@ -68,7 +68,7 @@
       "Brand": "Mercedes E270 AMG",
       "Segment": "premium",
       "FuelType": "benzyna",
-      "price": "320 PLN",
+      "price": "320",
       "IsAvailable": true
     },
     {
@@ -76,7 +76,7 @@
       "Brand": "Tesla Model S",
       "Segment": "premium",
       "FuelType": "elektryczny",
-      "Price": "350 PLN",
+      "Price": "350",
       "IsAvailable": true
     }
   ]

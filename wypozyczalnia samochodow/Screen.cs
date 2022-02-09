@@ -1,10 +1,5 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace wypozyczalnia_samochodow
 {
@@ -85,7 +80,7 @@ namespace wypozyczalnia_samochodow
                 string option = Console.ReadLine();
                 return option;
         }
-        public static string GetItemFromList(List<string> Items)
+        public static string GetItemFromList(List<string> Items, string Prompt)
         {
             bool FirstTimeAsking = true;
             while (true)
@@ -98,7 +93,7 @@ namespace wypozyczalnia_samochodow
                     Console.ForegroundColor = ConsoleColor.White;
                 }
                 FirstTimeAsking = false;
-                Console.WriteLine("WYBIERZ SEGMENT:");
+                Console.WriteLine("WYBIERZ" + Prompt + ":");
                 for(int i = 0; i < Items.Count; i++)
                 {
                     Console.WriteLine((i + 1) + ". " + Items[i]);
@@ -111,6 +106,57 @@ namespace wypozyczalnia_samochodow
                         return Items[Parsed - 1];
                 }
             }
+        }
+        public static int GetDaysCount()
+        {
+            bool FirstTimeAsking = true;
+            while (true)
+            {
+                Console.Clear();
+                if (!FirstTimeAsking)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("NIEPOPRAWNA ILOŚĆ DNI WYNAJMU");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }               
+                FirstTimeAsking = false;
+                Console.WriteLine("PODAJ ILOŚĆ DNI WYNAJMU POJAZDU:");
+                string response = Console.ReadLine();
+                int Parsed;
+                if (int.TryParse(response, out Parsed))
+                {
+                    if (Parsed > 0)
+                        return Parsed;
+                }
+            }
+        }
+
+        public static void ShowAgreement(RentalContract agreement)
+        {
+            Console.Clear();
+            if (agreement == null)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("NIESTETY, OBECNIE BRAK JEST POJAZDÓW SPEŁNIAJĄCYCH KRYTERIA");
+                Console.ForegroundColor = ConsoleColor.White;
+                return;
+            }
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("UMOWA WYNAJMU POJAZDU");
+            Console.WriteLine("DATA ZAWARCIA: " + agreement.AgreementDate.ToShortDateString());
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("-----------------------------------");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("WYNAJMUJĄCY: " + agreement.Clients.FullName);
+            Console.WriteLine("RODZAJ POJAZDU: " + agreement.Cars.Brand);
+            Console.WriteLine("RODZAJ PALIWA: " + agreement.Cars.FuelType);
+            Console.WriteLine("SEGMENT: " + agreement.Cars.Segment);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("-----------------------------------");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("DATA ZWROTU POJAZDU: " + agreement.ReturnDate.ToShortDateString());
+            Console.WriteLine("OPŁATA: " + agreement.TotalCost + " PLN");
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
     }

@@ -1,9 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿
 
 namespace wypozyczalnia_samochodow
 {
@@ -29,7 +24,14 @@ namespace wypozyczalnia_samochodow
                         client = carRental.GetClientByID(Screen.ClientID(firstTimeAsking));
                         firstTimeAsking = false;
                     }
-                    string Segment = Screen.GetItemFromList(carRental.GetSegmentListByClient(client));
+                    string Segment = Screen.GetItemFromList(carRental.GetSegmentListByClient(client), " SEGMENT");
+
+                    string FuelType = Screen.GetItemFromList(carRental.GetFuelTypes(), "RODZAJ PALIWA");
+
+                    int DaysCount = Screen.GetDaysCount();
+
+                    Screen.ShowAgreement(carRental.GetRentalAgreement(client, Segment, FuelType, DaysCount));
+
                 }
                 else
                 {

@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace wypozyczalnia_samochodow
 {
@@ -23,8 +21,6 @@ namespace wypozyczalnia_samochodow
             content = File.ReadAllText(path);
             AllCars = JsonConvert.DeserializeObject<List<Cars>>(content);
         }
-
-
        
         public Clients GetClientByID(String StrID)
         {
@@ -45,6 +41,49 @@ namespace wypozyczalnia_samochodow
             if (difference >= 4)
                 segments.Add("premium");
             return segments;
+        }
+        public List<string> GetFuelTypes()
+        {
+            List<string> FuelTypes = new List<string>();
+            FuelTypes.Add("benzyna");
+            FuelTypes.Add("elektryczny");
+            FuelTypes.Add("diesel");
+            return FuelTypes;
+        }
+
+        public RentalContract GetRentalAgreement(Clients c, string segment, string fuelType, int daysCount)
+        {
+            List<Cars> AvailableCars = AllCars.Where(s => s.Segment == segment)
+                .Where(s => s.FuelType == fuelType)
+                .Where(s => s.isAvailable).ToList();
+            if (AvailableCars.Count == 0)
+            {
+                return null;
+            }
+            Cars carToRent = AvailableCars.First();
+            carToRent.isAvailable = false;
+            int paidDays = daysCount;
+            if (daysCount > 30)
+            {
+                paidDays -= 3;
+            }
+            else if (daysCount > 7)
+            {
+                paidDays -= 1;
+            }
+
+            double TotalCost = paidDays * carToRent.Price;
+
+            int difference = DateTime.Now.Year - c.LicenceDate.Year;
+            if (difference < 4)
+            {
+                TotalCost *= 1.2;
+            }
+
+            DateTime rentUntil = DateTime.Now.AddDays(daysCount);
+
+            return new RentalContract(c, carToRent, DateTime.Now, rentUntil, TotalCost);
+
         }
     }
 }
