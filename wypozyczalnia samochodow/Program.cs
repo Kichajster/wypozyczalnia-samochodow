@@ -17,6 +17,7 @@ namespace wypozyczalnia_samochodow
                 }
                 else if (option == 2)
                 {
+                    //określ clienta
                     Clients client = null;
                     bool firstTimeAsking = true;
                     while (client == null)
@@ -24,12 +25,13 @@ namespace wypozyczalnia_samochodow
                         client = carRental.GetClientByID(Screen.ClientID(firstTimeAsking));
                         firstTimeAsking = false;
                     }
+                    //określ segment
                     string Segment = Screen.GetItemFromList(carRental.GetSegmentListByClient(client), " SEGMENT");
-
+                    //określ typ paliwa
                     string FuelType = Screen.GetItemFromList(carRental.GetFuelTypes(), "RODZAJ PALIWA");
-
+                    //określ ilość dni wynajmu
                     int DaysCount = Screen.GetDaysCount();
-
+                    //pokaż agreement
                     Screen.ShowAgreement(carRental.GetRentalAgreement(client, Segment, FuelType, DaysCount));
 
                 }

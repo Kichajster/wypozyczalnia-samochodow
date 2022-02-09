@@ -11,6 +11,7 @@ namespace wypozyczalnia_samochodow
         public List<Cars> AllCars = new List<Cars>();
         public List<Clients> AllClients = new List<Clients>();
 
+        //wczytywanie listy
         public CarRental()
         {
             string path = Directory.GetCurrentDirectory() + "\\clients.json";
@@ -22,6 +23,7 @@ namespace wypozyczalnia_samochodow
             AllCars = JsonConvert.DeserializeObject<List<Cars>>(content);
         }
        
+        //pobieranie klienta po ID
         public Clients GetClientByID(String StrID)
         {
             int IntID;
@@ -32,6 +34,7 @@ namespace wypozyczalnia_samochodow
                     return AllClients[i];
             return null;
         }
+        //tworzenie listy segmentu na podstawie klienta
         public List<string> GetSegmentListByClient(Clients client)
         {
             int difference = DateTime.Now.Year - client.LicenceDate.Year;
@@ -42,6 +45,7 @@ namespace wypozyczalnia_samochodow
                 segments.Add("premium");
             return segments;
         }
+        //tworzenie listy typów paliw
         public List<string> GetFuelTypes()
         {
             List<string> FuelTypes = new List<string>();
@@ -50,7 +54,7 @@ namespace wypozyczalnia_samochodow
             FuelTypes.Add("diesel");
             return FuelTypes;
         }
-
+        //tworzenie kontraktu
         public RentalContract GetRentalAgreement(Clients c, string segment, string fuelType, int daysCount)
         {
             List<Cars> AvailableCars = AllCars.Where(s => s.Segment == segment)

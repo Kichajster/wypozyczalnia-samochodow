@@ -1,6 +1,4 @@
-﻿
-
-namespace wypozyczalnia_samochodow
+﻿namespace wypozyczalnia_samochodow
 {
     public class Cars
     {

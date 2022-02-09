@@ -5,7 +5,7 @@ namespace wypozyczalnia_samochodow
 {
     public static class Screen
     {
-        
+        //pokaż menu
         public static void ShowMenu()
         {
             Console.WriteLine("WYBIERZ OPCJĘ:");
@@ -13,8 +13,8 @@ namespace wypozyczalnia_samochodow
             Console.WriteLine("2 => WYPOŻYCZENIE SAMOCHODU");
             Console.WriteLine("3 => ZAKOŃCZ PROGRAM");
             Console.WriteLine("WYBIERZ 1, 2 LUB 3:");
-        }//pokaż menu
-
+        }
+        //opcje menu
         public static int MenuOption()
         {
             ShowMenu();
@@ -34,8 +34,8 @@ namespace wypozyczalnia_samochodow
             return int.Parse(option);
 
 
-        } //menu opcji
-
+        } 
+        //lista klientów
         public static void ShowClients(List<Clients> AllClients)
         {
             Console.WriteLine("LISTA KLIENTÓW:");
@@ -46,7 +46,8 @@ namespace wypozyczalnia_samochodow
             {
                 Console.WriteLine(AllClients[i].Id + " | " + AllClients[i].FullName + " | " + AllClients[i].LicenceDate.ToShortDateString());
             }
-        }//lista klientów
+        }
+        //lista samochodów
         public static void ShowCars(List<Cars> AllCars)
         {
             Console.WriteLine();
@@ -58,15 +59,15 @@ namespace wypozyczalnia_samochodow
             {
                 Console.WriteLine(AllCars[i].Id + " | " + AllCars[i].Brand + " | " + AllCars[i].Segment + " | " + AllCars[i].FuelType + " | " + AllCars[i].Price);
             }
-        }//lista samochodów
-
+        }   
+        //pokaż liste klientów i samochodów
         public static void ShowAll(List<Clients> AllClients, List<Cars> AllCars)
         {
             Console.Clear();
             ShowClients(AllClients);
             ShowCars(AllCars);
-        }//pokaż liste klientów i samochodów
-
+        }
+        //pobieranie ID od użytkownika
         public static string ClientID(bool FirstTimeAsking)
         {
             Console.Clear();
@@ -80,6 +81,7 @@ namespace wypozyczalnia_samochodow
                 string option = Console.ReadLine();
                 return option;
         }
+        //pobieranie segmentu oraz typu paliwa
         public static string GetItemFromList(List<string> Items, string Prompt)
         {
             bool FirstTimeAsking = true;
@@ -107,6 +109,7 @@ namespace wypozyczalnia_samochodow
                 }
             }
         }
+        //podawanie ilości dni
         public static int GetDaysCount()
         {
             bool FirstTimeAsking = true;
@@ -130,7 +133,7 @@ namespace wypozyczalnia_samochodow
                 }
             }
         }
-
+        //podsumowanie
         public static void ShowAgreement(RentalContract agreement)
         {
             Console.Clear();
